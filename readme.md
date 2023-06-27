@@ -96,6 +96,9 @@ In my example, the browser was setted to throlling `fast 3G`, so the browser wil
 
 `The awnser is pending`
 
+I will example this in backend folder, but i face a problem with content-length:
+Issue: https://github.com/fastify/fastify/issues/4382
+
 ## 4. Can I use the `<audio>` tag for streaming?
 
 Sure, you can use the `<audio>` tag for streaming music.

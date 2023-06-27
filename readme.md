@@ -96,15 +96,6 @@ In my example, the browser was setted to throlling `fast 3G`, so the browser wil
 
 ## 3. How can I send chunks of audio to the client?
 
-`The awnser is pending`
-
-I will example this in backend folder, but i face a problem with content-length:
-Issue: https://github.com/fastify/fastify/issues/4382
-
-While i don't find a solution, i will use express to example this.
-
-you can see the example in backend2 folder.
-
 ### Instructions
 
 ```bash

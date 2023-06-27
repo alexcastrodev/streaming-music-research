@@ -27,9 +27,9 @@ fastify.get('/music/:id', async function (request, reply) {
     const stats = await stat(path)
     const fileSize = stats.size;
 
-    reply.type('audio/mpeg')
+    
     reply.headers({
-        'Content-Disposition': `attachment; filename=${music.file}`,
+        'Content-Disposition': `attachment; filename="${music.file}"`,
         'Content-Type': 'audio/mpeg',
         'Content-Length': fileSize,
         'Accept-Ranges': 'bytes',
@@ -37,8 +37,18 @@ fastify.get('/music/:id', async function (request, reply) {
         'Connection': 'keep-alive',
         'Content-Range': `bytes 0-${fileSize}/${fileSize}`
     })
+    reply.type('audio/mpeg')
 
-    return reply.send(audioStream).status(206)
+    audioStream.on('data', (chunk) => {
+        fastify.log.info(`Sending chunk of size ${chunk.length}`)
+        reply.raw.write(chunk)
+    })
+
+    audioStream.on('end', () => {
+        return reply.send()
+    })
+
+    return reply
 })
 
 fastify.listen({ port: 3000, host: '0.0.0.0' })

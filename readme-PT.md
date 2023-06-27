@@ -99,15 +99,6 @@ No meu exemplo, o navegador estava configurado para simular uma conexão "fast 3
 
 ## 3. Como posso enviar pedaços de áudio para o cliente?
 
-`A resposta está pendente`
-
-Exemplificarei isso na pasta "backend", mas encontrei um problema com o "content-length":
-Problema: https://github.com/fastify/fastify/issues/4382
-
-Enquanto não encontro uma solução, usarei o Express para exemplificar.
-
-Você pode ver o exemplo na pasta "backend2".
-
 ### Instruções
 
 ```bash

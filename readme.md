@@ -1,3 +1,5 @@
+[Também em pt-BR](readme-PT.md)
+
 # Introduction
 
 Before i start the project, i had some question about music streaming on Browser.

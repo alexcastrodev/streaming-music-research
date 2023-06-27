@@ -99,6 +99,26 @@ In my example, the browser was setted to throlling `fast 3G`, so the browser wil
 I will example this in backend folder, but i face a problem with content-length:
 Issue: https://github.com/fastify/fastify/issues/4382
 
+While i don't find a solution, i will use express to example this.
+
+you can see the example in backend2 folder.
+
+### Instructions
+
+```bash
+cd backend2
+docker-compose up -d
+```
+
+and open the http://localhost:8080/ in your browser, and click in play button.
+
+You will see this:
+
+<img src=".github/3_streaming.png" />
+
+The browser will request the entire file, but the server will respond with the partial content.
+After click play, it start to download the rest of file chunk by chunk, but you can listen the music.
+
 ## 4. Can I use the `<audio>` tag for streaming?
 
 Sure, you can use the `<audio>` tag for streaming music.

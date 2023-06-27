@@ -7,3 +7,15 @@ services:
       dockerfile: ./backend/Dockerfile
     ports:
       - "3000:3000"
+  streaming_api_2:
+    build:
+      context: .
+      dockerfile: ./backend2/Dockerfile
+    ports:
+      - "3001:3001"
+  frontend:
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+    ports:
+      - "8080:80"

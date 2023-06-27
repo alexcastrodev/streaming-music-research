@@ -106,7 +106,6 @@ you can see the example in backend2 folder.
 ### Instructions
 
 ```bash
-cd backend2
 docker-compose up -d
 ```
 

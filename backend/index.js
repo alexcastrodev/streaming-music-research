@@ -38,7 +38,7 @@ fastify.get('/music/:id', async function (request, reply) {
         'Content-Range': `bytes 0-${fileSize}/${fileSize}`
     })
 
-    reply.send(audioStream).status(206)
+    return reply.send(audioStream).status(206)
 })
 
 fastify.listen({ port: 3000, host: '0.0.0.0' })
